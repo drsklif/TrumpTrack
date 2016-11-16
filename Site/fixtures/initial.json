@@ -1,0 +1,51 @@
+[
+  {
+    "model": "Site.ParcelSize",
+    "pk": 1,
+    "fields": {
+      "size": "SM"
+    }
+  },
+  {
+    "model": "Site.ParcelSize",
+    "pk": 2,
+    "fields": {
+      "size": "MD"
+    }
+  },
+  {
+    "model": "Site.ParcelSize",
+    "pk": 3,
+    "fields": {
+      "size": "XL"
+    }
+  },
+  {
+    "model": "Site.PropertyType",
+    "pk": 1,
+    "fields": {
+      "name": "ООО"
+    }
+  },
+  {
+    "model": "Site.PropertyType",
+    "pk": 2,
+    "fields": {
+      "name": "ИП"
+    }
+  },
+  {
+    "model": "Site.PropertyType",
+    "pk": 3,
+    "fields": {
+      "name": "ОАО"
+    }
+  },
+  {
+    "model": "Site.PropertyType",
+    "pk": 4,
+    "fields": {
+      "name": "ЗАО"
+    }
+  }
+]
