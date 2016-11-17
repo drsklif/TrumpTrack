@@ -1,11 +1,10 @@
 # -*- coding: utf-8 -*-
 
 from django import forms
-from django.core.exceptions import ValidationError
 
-from Site.models import Request, PropertyType
+from site.models import Request, PropertyType
 
-__author__ = 'sobolevn'
+__author__ = 'ildyakov'
 
 
 class PropertyTypeForm(forms.ModelForm):

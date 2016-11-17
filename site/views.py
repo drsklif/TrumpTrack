@@ -6,11 +6,11 @@ from django.http import HttpResponse, Http404
 from django.shortcuts import render, redirect, get_object_or_404
 from django.utils import timezone
 
-from Site.models import Request, PropertyType, ParcelSize
-from Site.forms import RequestForm, PropertyTypeForm
+from site.models import Request, PropertyType, ParcelSize
+from site.forms import RequestForm, PropertyTypeForm
 
 
-# Create your views here.
+__author__ = 'ildyakov'
 
 
 def index(request):

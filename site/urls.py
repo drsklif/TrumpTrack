@@ -1,6 +1,8 @@
 from django.conf.urls import url
 
-from Site.views import index, create_request, view_request
+from site.views import index, create_request, view_request
+
+__author__ = 'ildyakov'
 
 urlpatterns = [
     url(r'^$', index, name='index'),

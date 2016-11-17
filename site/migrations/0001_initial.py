@@ -39,8 +39,8 @@ class Migration(migrations.Migration):
                 ('date_send', models.DateField()),
                 ('description', models.CharField(max_length=1024)),
                 ('weight', models.FloatField()),
-                ('property_type', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='requests', to='Site.PropertyType')),
-                ('size', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='requests', to='Site.ParcelSize')),
+                ('property_type', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='requests', to='site.PropertyType')),
+                ('size', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='requests', to='site.ParcelSize')),
             ],
         ),
     ]
