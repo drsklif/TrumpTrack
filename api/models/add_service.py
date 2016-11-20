@@ -21,7 +21,7 @@ class AdditionalService(models.Model):
     name = models.CharField(max_length=50)
 
     """Additional service price / Стоимость дополнительной услуги"""
-    price = models.DecimalField()
+    price = models.DecimalField(max_digits=19, decimal_places=10)
 
     def __str__(self):
         return self.name

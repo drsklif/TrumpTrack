@@ -1,48 +1,48 @@
 [
   {
-    "model": "Site.ParcelSize",
+    "model": "site_app.ParcelSize",
     "pk": 1,
     "fields": {
       "size": "SM"
     }
   },
   {
-    "model": "Site.ParcelSize",
+    "model": "site_app.ParcelSize",
     "pk": 2,
     "fields": {
       "size": "MD"
     }
   },
   {
-    "model": "Site.ParcelSize",
+    "model": "site_app.ParcelSize",
     "pk": 3,
     "fields": {
       "size": "XL"
     }
   },
   {
-    "model": "Site.PropertyType",
+    "model": "site_app.PropertyType",
     "pk": 1,
     "fields": {
       "name": "ООО"
     }
   },
   {
-    "model": "Site.PropertyType",
+    "model": "site_app.PropertyType",
     "pk": 2,
     "fields": {
       "name": "ИП"
     }
   },
   {
-    "model": "Site.PropertyType",
+    "model": "site_app.PropertyType",
     "pk": 3,
     "fields": {
       "name": "ОАО"
     }
   },
   {
-    "model": "Site.PropertyType",
+    "model": "site_app.PropertyType",
     "pk": 4,
     "fields": {
       "name": "ЗАО"

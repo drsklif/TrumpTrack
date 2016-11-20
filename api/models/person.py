@@ -10,7 +10,7 @@ Person model description / Описание модели персоны
 from django.db import models
 
 from api.models.contractor import Contractor
-from api.models.transportation_request import TransportationRequest
+from api.models.tr import TransportationRequest
 
 __author__ = 'ildyakov'
 

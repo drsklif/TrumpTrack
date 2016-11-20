@@ -13,6 +13,11 @@ __author__ = 'ildyakov'
 
 
 class TransportationRequestType(models.Model):
+    """
+    Transportation request type reference / Справочник типов заявок на транспортировку
+    """
+
+    """Request type name / Название типа заявки"""
     name = models.CharField(max_length=50)
 
     def __str__(self):
