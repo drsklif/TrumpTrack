@@ -2,7 +2,7 @@
 
 from django import forms
 
-from site.models import Request, PropertyType
+from site_app.models import Request, PropertyType
 
 __author__ = 'ildyakov'
 

@@ -1,6 +1,6 @@
 from django.conf.urls import url
 
-from site.views import index, create_request, view_request
+from site_app.views import index, create_request, view_request
 
 __author__ = 'ildyakov'
 

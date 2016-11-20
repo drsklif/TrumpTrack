@@ -6,8 +6,8 @@ from django.http import HttpResponse, Http404
 from django.shortcuts import render, redirect, get_object_or_404
 from django.utils import timezone
 
-from site.models import Request, PropertyType, ParcelSize
-from site.forms import RequestForm, PropertyTypeForm
+from site_app.models import Request, PropertyType, ParcelSize
+from site_app.forms import RequestForm, PropertyTypeForm
 
 
 __author__ = 'ildyakov'
@@ -16,7 +16,7 @@ __author__ = 'ildyakov'
 def index(request):
     if request.method == 'GET':
         requests = Request.objects.all()
-        return render(request, 'Site/index.html', {'requests': requests})
+        return render(request, 'site_app/index.html', {'requests': requests})
     return HttpResponse(status=405)
 
 
@@ -25,7 +25,7 @@ def create_request(request):
         c = {
             'form': RequestForm,
         }
-        return render(request, 'Site/create_request.html', c)
+        return render(request, 'site_app/create_request.html', c)
 
     elif request.method == 'POST':
         form = RequestForm(request.POST)
@@ -41,7 +41,7 @@ def create_request(request):
             c = {
                 'form': form,
             }
-            return render(request, 'Site/create_request.html', c)
+            return render(request, 'site_app/create_request.html', c)
     return HttpResponse(status=405)
 
 
@@ -55,5 +55,5 @@ def view_request(request, request_id):
         if not item:
             raise Http404
 
-        return render(request, 'Site/view_request.html', {'item': item})
+        return render(request, 'site_app/view_request.html', {'item': item})
     return HttpResponse(status=405)

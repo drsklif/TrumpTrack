@@ -37,8 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'site',
     'api',
+    'site_app',
 ]
 
 MIDDLEWARE = [
@@ -52,7 +52,7 @@ MIDDLEWARE = [
 ]
 
 FIXTURE_DIRS = (
-   '/Site/fixtures/',
+   '/site_app/fixtures/',
 )
 
 ROOT_URLCONF = 'TrumpTrack.urls'
