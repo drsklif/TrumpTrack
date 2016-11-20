@@ -98,3 +98,9 @@ ENV/
 #builders
 bower_components/
 node_modules/
+
+#deploy files
+tt_nginx.conf
+tt_uwsgi.ini
+uwsgi_params
+static/admin/*
