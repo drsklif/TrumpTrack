@@ -4,7 +4,7 @@
 Created on 20.11.2016
 
 :author: Alexander Ildyakov
-Cargo model description / Описание модели груза
+Cargo reference / Справочник грузов
 """
 
 from django.db import models
