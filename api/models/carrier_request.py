@@ -9,7 +9,7 @@ Carrier request / Заявка с перевозчиком
 
 from django.db import models
 
-from api.models import Contractor
+from api.models.contractor import Contractor
 
 __author__ = 'ildyakov'
 
