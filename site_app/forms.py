@@ -2,7 +2,8 @@
 
 from django import forms
 
-from site_app.models import Request, PropertyType
+from api.models.property_type import PropertyType
+from api.models.tr import TransportationRequest
 
 __author__ = 'ildyakov'
 
@@ -17,5 +18,5 @@ class PropertyTypeForm(forms.ModelForm):
 
 class RequestForm(forms.ModelForm):
     class Meta:
-        model = Request
+        model = TransportationRequest
         fields = '__all__'

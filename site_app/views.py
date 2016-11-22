@@ -1,22 +1,33 @@
+# -*- coding: utf-8 -*-
+
+"""
+Created on 16.11.2016
+
+:author: Alexander Ildyakov
+App views
+"""
 
 from django.core.urlresolvers import reverse
 from django.db import transaction
-from django.db.models import Avg, Count, F
-from django.http import HttpResponse, Http404
+from django.http import HttpResponse
 from django.shortcuts import render, redirect, get_object_or_404
-from django.utils import timezone
 
-from site_app.models import Request, PropertyType, ParcelSize
-from site_app.forms import RequestForm, PropertyTypeForm
+from api.models.tr import TransportationRequest
+from site_app.forms import RequestForm
 
+import logging
 
 __author__ = 'ildyakov'
+
+logger = logging.getLogger(__name__)
 
 
 def index(request):
     if request.method == 'GET':
-        requests = Request.objects.all()
+        requests = TransportationRequest.objects.all()
         return render(request, 'site_app/index.html', {'requests': requests})
+
+    logger.log('/ wrong http method')
     return HttpResponse(status=405)
 
 
@@ -42,18 +53,15 @@ def create_request(request):
                 'form': form,
             }
             return render(request, 'site_app/create_request.html', c)
+
+    logger.log('/create_request wrong http method')
     return HttpResponse(status=405)
 
 
 def view_request(request, request_id):
     if request.method == 'GET':
-
-        item = Request.objects.filter(
-            id=request_id
-        ).first()
-
-        if not item:
-            raise Http404
-
+        item = get_object_or_404(TransportationRequest, pk=request_id)
         return render(request, 'site_app/view_request.html', {'item': item})
+
+    logger.log('/view_request wrong http method')
     return HttpResponse(status=405)
