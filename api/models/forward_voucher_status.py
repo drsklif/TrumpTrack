@@ -5,6 +5,7 @@ Created on 21.11.2016
 
 :author: Alexander Ildyakov
 Forward voucher status model description / Описание модели статуса экспедиторской расписки
+System data type / Системный тип данных
 """
 
 from django.db import models

@@ -5,6 +5,7 @@ Created on 21.11.2016
 
 :author: Alexander Ildyakov
 Payment type reference / Справочник видов расчета
+System data type / Системный тип данных
 """
 
 from django.db import models

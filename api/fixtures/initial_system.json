@@ -1,0 +1,135 @@
+[
+  {
+    "model": "api.ContractorStatus",
+    "pk": 1,
+    "fields": {
+      "name": "Потенциальный"
+    }
+  },
+  {
+    "model": "api.ContractorStatus",
+    "pk": 2,
+    "fields": {
+      "name": "Действующий"
+    }
+  },
+  {
+    "model": "api.ContractorStatus",
+    "pk": 3,
+    "fields": {
+      "name": "Уснувший"
+    }
+  },
+  {
+    "model": "api.ContractorStatus",
+    "pk": 4,
+    "fields": {
+      "name": "Удален"
+    }
+  },
+  {
+    "model": "api.PropertyType",
+    "pk": 1,
+    "fields": {
+      "name": "ООО"
+    }
+  },
+  {
+    "model": "api.PropertyType",
+    "pk": 2,
+    "fields": {
+      "name": "ИП"
+    }
+  },
+  {
+    "model": "api.PropertyType",
+    "pk": 3,
+    "fields": {
+      "name": "ОАО"
+    }
+  },
+  {
+    "model": "api.PropertyType",
+    "pk": 4,
+    "fields": {
+      "name": "ЗАО"
+    }
+  },
+  {
+    "model": "api.ForwardVoucherStatus",
+    "pk": 1,
+    "fields": {
+      "name": "На складе"
+    }
+  },
+  {
+    "model": "api.ForwardVoucherStatus",
+    "pk": 2,
+    "fields": {
+      "name": "В пути"
+    }
+  },
+  {
+    "model": "api.ForwardVoucherStatus",
+    "pk": 3,
+    "fields": {
+      "name": "Выдано"
+    }
+  },
+  {
+    "model": "api.ForwardVoucherType",
+    "pk": 1,
+    "fields": {
+      "name": "Предварительная"
+    }
+  },
+  {
+    "model": "api.ForwardVoucherType",
+    "pk": 2,
+    "fields": {
+      "name": "Итоговая"
+    }
+  },
+  {
+    "model": "api.PaymentType",
+    "pk": 1,
+    "fields": {
+      "name": "Наличный"
+    }
+  },
+  {
+    "model": "api.PaymentType",
+    "pk": 2,
+    "fields": {
+      "name": "Безналичный"
+    }
+  },
+  {
+    "model": "api.ShipmentStatus",
+    "pk": 1,
+    "fields": {
+      "name": "Новая"
+    }
+  },
+  {
+    "model": "api.ShipmentStatus",
+    "pk": 2,
+    "fields": {
+      "name": "В работе"
+    }
+  },
+  {
+    "model": "api.ShipmentStatus",
+    "pk": 3,
+    "fields": {
+      "name": "Отправлено"
+    }
+  },
+  {
+    "model": "api.ShipmentStatus",
+    "pk": 4,
+    "fields": {
+      "name": "Получено"
+    }
+  }
+]

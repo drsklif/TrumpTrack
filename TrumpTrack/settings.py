@@ -53,7 +53,8 @@ MIDDLEWARE = [
 ]
 
 FIXTURE_DIRS = (
-   '/site_app/fixtures/',
+    '/site_app/fixtures/',
+    '/api/fixtures/',
 )
 
 ROOT_URLCONF = 'TrumpTrack.urls'

@@ -12,6 +12,7 @@ from django.db import models
 from api.models.add_service import AdditionalService
 from api.models.parcel_size import ParcelSize
 from api.models.contractor import Contractor
+from api.models.forward_voucher_type import ForwardVoucherType
 from api.models.forward_voucher_status import ForwardVoucherStatus
 from api.models.cargo import Cargo
 from api.models.cargo_state import CargoState
@@ -25,6 +26,9 @@ class ForwardVoucher(models.Model):
     """
     Forward voucher / Экспедиторская расписка
     """
+
+    """Forward voucher type / Тип экспедиторской расписки"""
+    fv_type = models.ForeignKey(ForwardVoucherType, on_delete=models.CASCADE, related_name='+', default=1)
 
     """Forward voucher status / Статус экспедиторской расписки"""
     status = models.ForeignKey(ForwardVoucherStatus, on_delete=models.CASCADE, related_name='+', )

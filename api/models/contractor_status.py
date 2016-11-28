@@ -5,6 +5,7 @@ Created on 17.11.2016
 
 :author: Alexander Ildyakov
 Contractor status model description / Описание модели статуса контрагента
+System data type / Системный тип данных
 """
 
 from django.db import models

@@ -5,6 +5,7 @@ Created on 21.11.2016
 
 :author: Alexander Ildyakov
 Shipment status reference / Справочник статусов отправки
+System data type / Системный тип данных
 """
 
 from django.db import models
