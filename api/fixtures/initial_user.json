@@ -1,0 +1,100 @@
+[
+  {
+    "model": "api.PackagingType",
+    "pk": 1,
+    "fields": {
+      "name": "Коробка"
+    }
+  },
+  {
+    "model": "api.PackagingType",
+    "pk": 2,
+    "fields": {
+      "name": "Контейнер"
+    }
+  },
+  {
+    "model": "api.VehicleType",
+    "pk": 1,
+    "fields": {
+      "name": "Авто фура Тент"
+    }
+  },
+  {
+    "model": "api.VehicleType",
+    "pk": 2,
+    "fields": {
+      "name": "Вагон"
+    }
+  },
+  {
+    "model": "api.VehicleType",
+    "pk": 3,
+    "fields": {
+      "name": "Контейнер 20т"
+    }
+  },
+  {
+    "model": "api.VehicleType",
+    "pk": 4,
+    "fields": {
+      "name": "Контейнер 40т"
+    }
+  },
+  {
+    "model": "api.VehicleType",
+    "pk": 5,
+    "fields": {
+      "name": "Авто фура Рефрижератор +5"
+    }
+  },
+  {
+    "model": "api.VehicleType",
+    "pk": 6,
+    "fields": {
+      "name": "Авто фура Рефрижератор -18"
+    }
+  },
+  {
+    "model": "api.TransportationRequestStatus",
+    "pk": 1,
+    "fields": {
+      "name": "Новая"
+    }
+  },
+  {
+    "model": "api.TransportationRequestType",
+    "pk": 1,
+    "fields": {
+      "name": "Предварительная"
+    }
+  },
+  {
+    "model": "api.CargoState",
+    "pk": 1,
+    "fields": {
+      "name": "В норме"
+    }
+  },
+  {
+    "model": "api.CargoState",
+    "pk": 2,
+    "fields": {
+      "name": "Помят"
+    }
+  },
+  {
+    "model": "api.CargoState",
+    "pk": 3,
+    "fields": {
+      "name": "Поврежден"
+    }
+  },
+  {
+    "model": "api.CargoState",
+    "pk": 4,
+    "fields": {
+      "name": "Мокрый"
+    }
+  }
+]

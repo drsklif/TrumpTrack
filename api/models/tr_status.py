@@ -5,6 +5,7 @@ Created on 18.11.2016
 
 :author: Alexander Ildyakov
 Transportation request status model description / Описание модели статуса заявки на транспортировку
+User data type / Пользовательский тип данных
 """
 
 from django.db import models
@@ -14,7 +15,7 @@ __author__ = 'ildyakov'
 
 class TransportationRequestStatus(models.Model):
     """
-    Contractor status / Статус контрагента
+    Transportation request status / Статус заявки на транспортировку
     """
 
     """Status name / Название статуса"""

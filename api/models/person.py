@@ -5,6 +5,7 @@ Created on 17.11.2016
 
 :author: Alexander Ildyakov
 Person model description / Описание модели персоны
+User data type / Пользовательский тип данных
 """
 
 from django.db import models

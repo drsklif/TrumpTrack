@@ -5,6 +5,7 @@ Created on 20.11.2016
 
 :author: Alexander Ildyakov
 Packaging type model description / Описание модели типа упаковки
+User data type / Пользовательский тип данных
 """
 
 from django.db import models
