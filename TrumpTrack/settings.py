@@ -129,3 +129,42 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 
 STATIC_URL = '/static/'
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'file_formatter': {
+            'format': '%(asctime)s; %(filename)s:%(lineno)d '
+                      '%(levelname)s:%(name)s: %(message)s',
+            'datefmt': "%Y-%m-%d %H:%M:%S",
+        },
+    },
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': 'logs/debug.log',
+            'formatter': 'file_formatter',
+        },
+    },
+    'loggers': {
+        'django.request': {
+            'handlers': ['file',],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+        'django': {
+            'handlers': ['file',],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+        'py.warnings': {
+            'handlers': ['file',],
+        },
+        '': {
+            'handlers': ['file',],
+            'level': "DEBUG",
+        },
+    },
+}

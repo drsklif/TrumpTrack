@@ -20,6 +20,9 @@ import logging
 __author__ = 'ildyakov'
 
 logger = logging.getLogger(__name__)
+logger.debug('debug msg')
+logger.info('info msg')
+logger.error('error msg')
 
 
 def index(request):
