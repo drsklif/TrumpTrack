@@ -4,7 +4,9 @@
 Created on 20.11.2016
 
 :author: Alexander Ildyakov
+
 Additional services model description / Описание модели дополнительных услуг
+
 User data type / Пользовательский тип данных
 """
 

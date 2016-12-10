@@ -4,7 +4,9 @@
 Created on 21.11.2016
 
 :author: Alexander Ildyakov
+
 Cargo state reference / Справочник состояний грузов
+
 User data type / Пользовательский тип данных
 """
 

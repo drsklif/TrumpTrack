@@ -4,7 +4,9 @@
 Created on 21.11.2016
 
 :author: Alexander Ildyakov
+
 Forward voucher expenses / Дополнительные затраты экспедиторской расписки
+
 User data type / Пользовательский тип данных
 """
 

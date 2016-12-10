@@ -4,7 +4,9 @@
 Created on 17.11.2016
 
 :author: Alexander Ildyakov
+
 Parcel size model description / Описание модели размера отправления
+
 System data type / Системный тип данных
 """
 

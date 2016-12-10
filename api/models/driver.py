@@ -4,7 +4,9 @@
 Created on 20.11.2016
 
 :author: Alexander Ildyakov
+
 Driver model description / Описание модели водителя
+
 User data type / Пользовательский тип данных
 """
 

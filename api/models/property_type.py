@@ -4,7 +4,9 @@
 Created on 17.11.2016
 
 :author: Alexander Ildyakov
+
 Property type model description / Описание модели типа собственности
+
 User data type / Пользовательский тип данных
 """
 

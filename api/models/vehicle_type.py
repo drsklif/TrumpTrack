@@ -4,7 +4,9 @@
 Created on 20.11.2016
 
 :author: Alexander Ildyakov
+
 Vehicle type model description / Описание модели типа транспортного средства
+
 User data type / Пользовательский тип данных
 """
 

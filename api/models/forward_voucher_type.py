@@ -4,7 +4,9 @@
 Created on 28.11.2016
 
 :author: Alexander Ildyakov
+
 Forward voucher type type / Справочник типов экспедиционных расписок
+
 System data type / Системный тип данных
 """
 

@@ -4,6 +4,7 @@
 Created on 18.11.2016
 
 :author: Alexander Ildyakov
+
 Transportation request type model description / Описание модели типа заявки на транспортировку
 """
 
