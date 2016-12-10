@@ -5,7 +5,7 @@ Created on 17.11.2016
 
 :author: Alexander Ildyakov
 Parcel size model description / Описание модели размера отправления
-User data type / Пользовательский тип данных
+System data type / Системный тип данных
 """
 
 from django.db import models

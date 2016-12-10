@@ -131,5 +131,26 @@
     "fields": {
       "name": "Получено"
     }
+  },
+  {
+    "model": "api.ParcelSize",
+    "pk": 1,
+    "fields": {
+      "size": "XL"
+    }
+  },
+  {
+    "model": "api.ParcelSize",
+    "pk": 2,
+    "fields": {
+      "size": "MD"
+    }
+  },
+  {
+    "model": "api.ParcelSize",
+    "pk": 3,
+    "fields": {
+      "size": "SM"
+    }
   }
 ]
