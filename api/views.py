@@ -1,3 +1,4 @@
+from rest_framework import viewsets
 from api.models.property_type import PropertyType
 from api.models.contractor_status import ContractorStatus
 from api.models.contractor import Contractor
@@ -5,10 +6,10 @@ from api.models.parcel_size import ParcelSize
 from api.models.tr_type import TransportationRequestType
 from api.models.tr_status import TransportationRequestStatus
 from api.models.tr import TransportationRequest
-from rest_framework import viewsets
 from api.serializers import PropertyTypeSerializer, ContractorStatusSerializer, ContractorSerializer
 from api.serializers import ParcelSizeSerializer, TransportationRequestTypeSerializer, \
     TransportationRequestStatusSerializer, TransportationRequestSerializer
+from api import filters
 
 
 class PropertyTypeViewSet(viewsets.ModelViewSet):
@@ -34,6 +35,8 @@ class ContractorViewSet(viewsets.ModelViewSet):
     """
     queryset = Contractor.objects.all().order_by('-id')
     serializer_class = ContractorSerializer
+    filter_fields = ('name',)
+    filter_class = filters.ContractorFilter
 
 
 class ParcelSizeViewSet(viewsets.ModelViewSet):
