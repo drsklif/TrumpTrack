@@ -8,45 +8,45 @@ from api.models.tr import TransportationRequest
 from rest_framework import serializers
 
 
-class PropertyTypeSerializer(serializers.HyperlinkedModelSerializer):
+class PropertyTypeSerializer(serializers.ModelSerializer):
     class Meta:
         model = PropertyType
-        fields = ('url', 'name',)
+        fields = ('id', 'name',)
 
 
-class ContractorStatusSerializer(serializers.HyperlinkedModelSerializer):
+class ContractorStatusSerializer(serializers.ModelSerializer):
     class Meta:
         model = ContractorStatus
-        fields = ('url', 'name', )
+        fields = ('id', 'name', )
 
 
-class ContractorSerializer(serializers.HyperlinkedModelSerializer):
+class ContractorSerializer(serializers.ModelSerializer):
     class Meta:
         model = Contractor
-        fields = ('url', 'name', 'full_name', 'property_type', 'status', 'phone', 'fax', 'email', 'address_legal',
+        fields = ('id', 'name', 'full_name', 'property_type', 'status', 'phone', 'fax', 'email', 'address_legal',
                   'address_actual', 'address_mailing', 'notes',)
 
 
-class ParcelSizeSerializer(serializers.HyperlinkedModelSerializer):
+class ParcelSizeSerializer(serializers.ModelSerializer):
     class Meta:
         model = ParcelSize
-        fields = ('url', 'size', )
+        fields = ('id', 'size', )
 
 
-class TransportationRequestTypeSerializer(serializers.HyperlinkedModelSerializer):
+class TransportationRequestTypeSerializer(serializers.ModelSerializer):
     class Meta:
         model = TransportationRequestType
-        fields = ('url', 'name',)
+        fields = ('id', 'name',)
 
 
-class TransportationRequestStatusSerializer(serializers.HyperlinkedModelSerializer):
+class TransportationRequestStatusSerializer(serializers.ModelSerializer):
     class Meta:
         model = TransportationRequestStatus
-        fields = ('url', 'name', )
+        fields = ('id', 'name', )
 
 
-class TransportationRequestSerializer(serializers.HyperlinkedModelSerializer):
+class TransportationRequestSerializer(serializers.ModelSerializer):
     class Meta:
         model = TransportationRequest
-        fields = ('url', 'client', 'address_from', 'address_to', 'date_departure', 'description', 'weight', 'size',
+        fields = ('id', 'client', 'address_from', 'address_to', 'date_departure', 'description', 'weight', 'size',
                   'type', 'status',)
