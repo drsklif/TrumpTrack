@@ -20,8 +20,8 @@ class ContractorStatus(models.Model):
     Contractor status / Статус контрагента
     """
 
-    """Status name / Название статуса"""
     name = models.CharField(max_length=256)
+    """Status name / Название статуса"""
 
     def __str__(self):
         return self.name

@@ -20,8 +20,8 @@ class PaymentType(models.Model):
     Payment type reference / Справочник видов расчета
     """
 
-    """Payment type name / Наименование вида расчета"""
     name = models.CharField(max_length=50)
+    """Payment type name / Наименование вида расчета"""
 
     def __str__(self):
         return self.name

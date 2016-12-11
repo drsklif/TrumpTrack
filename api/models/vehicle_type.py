@@ -20,8 +20,8 @@ class VehicleType(models.Model):
     Vehicle type reference / Справочник типов транспортных средств
     """
 
-    """Vehicle type name / Наименование транспортного средства"""
     name = models.CharField(max_length=50)
+    """Vehicle type name / Наименование транспортного средства"""
 
     def __str__(self):
         return self.name

@@ -23,20 +23,20 @@ class Shipment(models.Model):
     Shipment / Отправка
     """
 
-    """Shipment status / Статус отправки"""
     status = models.ForeignKey(ShipmentStatus, on_delete=models.CASCADE, related_name='+',)
+    """Shipment status / Статус отправки"""
 
-    """Sending date / Дата отправки"""
     date_sending = models.DateField()
+    """Sending date / Дата отправки"""
 
-    """Arrival date planed / Дата прибытия планируемая"""
     date_arrival_plan = models.DateField()
+    """Arrival date planed / Дата прибытия планируемая"""
 
-    """Arrival date fact / Дата прибытия фактическая"""
     date_arrival_fact = models.DateField()
+    """Arrival date fact / Дата прибытия фактическая"""
 
-    """Carrier request / Заявка с перевозчиком"""
     carrier_request = models.ForeignKey(CarrierRequest, on_delete=models.CASCADE, related_name='shipments', )
+    """Carrier request / Заявка с перевозчиком"""
 
     def __str__(self):
         return self.name

@@ -21,23 +21,23 @@ class Vehicle(models.Model):
     Vehicle reference / Справочник транспортных средств
     """
 
-    """Vehicle type / Тип ТС"""
     vehicle_type = models.ForeignKey(VehicleType, on_delete=models.CASCADE, related_name='+',)
+    """Vehicle type / Тип ТС"""
 
-    """Vehicle model / Марка ТС"""
     model = models.CharField(max_length=50)
+    """Vehicle model / Марка ТС"""
 
-    """Tractor number / Гос. номер тягача"""
     tractor_number = models.CharField(max_length=50)
+    """Tractor number / Гос. номер тягача"""
 
-    """Trailer number / Гос. номер прицепа"""
     trailer_number = models.CharField(max_length=50)
+    """Trailer number / Гос. номер прицепа"""
 
-    """Vehicle owner / Владелец ТС"""
     owner = models.CharField(max_length=256)
+    """Vehicle owner / Владелец ТС"""
 
-    """Vehicle owner address / Адрес владельца ТС"""
     owner_address = models.CharField(max_length=256)
+    """Vehicle owner address / Адрес владельца ТС"""
 
     def __str__(self):
         return self.name

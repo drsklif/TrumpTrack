@@ -22,17 +22,17 @@ class Cargo(models.Model):
     Cargo reference / Справочник грузов
     """
 
-    """Cargo name / Наименование груза"""
     name = models.CharField(max_length=50)
+    """Cargo name / Наименование груза"""
 
-    """Cargo packaging type / Тип упаковки груза"""
     packaging_type = models.ForeignKey(PackagingType, on_delete=models.CASCADE, related_name='+',)
+    """Cargo packaging type / Тип упаковки груза"""
 
-    """Weight / Вес"""
     weight = models.FloatField()
+    """Weight / Вес"""
 
-    """Size / Размер"""
     size = models.ForeignKey(ParcelSize, on_delete=models.CASCADE, related_name='+', )
+    """Size / Размер"""
 
     def __str__(self):
         return self.name

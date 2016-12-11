@@ -16,7 +16,12 @@ __author__ = 'ildyakov'
 
 
 class PropertyType(models.Model):
+    """
+    Property type / Тип собственности
+    """
+
     name = models.CharField(max_length=50)
+    """Property type name / Название типа собственности"""
 
     def __str__(self):
         return self.name

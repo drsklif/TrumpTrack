@@ -1,3 +1,13 @@
+# -*- coding: utf-8 -*-
+
+"""
+Created on 11.12.2016
+
+:author: Alexander Ildyakov
+
+Models serializers / Сериализаторы моделей
+"""
+
 from api.models.property_type import PropertyType
 from api.models.contractor_status import ContractorStatus
 from api.models.contractor import Contractor
@@ -6,6 +16,8 @@ from api.models.tr_type import TransportationRequestType
 from api.models.tr_status import TransportationRequestStatus
 from api.models.tr import TransportationRequest
 from rest_framework import serializers
+
+__author__ = 'ildyakov'
 
 
 class PropertyTypeSerializer(serializers.ModelSerializer):

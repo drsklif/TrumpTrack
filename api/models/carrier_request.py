@@ -22,50 +22,50 @@ class CarrierRequest(models.Model):
     Carrier request / Заявка с перевозчиком
     """
 
-    """Sender / Отправитель"""
     sender = models.ForeignKey(Contractor, on_delete=models.CASCADE, related_name='+', )
+    """Sender / Отправитель"""
 
-    """Loading address / Адрес погрузки"""
     loading_address = models.CharField(max_length=256)
+    """Loading address / Адрес погрузки"""
 
-    """Loading contacts / Контакты на месте погрузки"""
     loading_contacts = models.CharField(max_length=256, blank=True)
+    """Loading contacts / Контакты на месте погрузки"""
 
-    """Recipient / Получатель"""
     recipient = models.ForeignKey(Contractor, on_delete=models.CASCADE, related_name='+', )
+    """Recipient / Получатель"""
 
-    """Landing address / Адрес выгрузки"""
     landing_address = models.CharField(max_length=256)
+    """Landing address / Адрес выгрузки"""
 
-    """Landing contacts / Контакты на месте выгрузки"""
     landing_contacts = models.CharField(max_length=256, blank=True)
+    """Landing contacts / Контакты на месте выгрузки"""
 
-    """Vehicle / Транспортное средство"""
     vehicle = models.ForeignKey(Contractor, on_delete=models.CASCADE, related_name='+', )
+    """Vehicle / Транспортное средство"""
 
-    """Driver / Водитель"""
     driver = models.ForeignKey(Contractor, on_delete=models.CASCADE, related_name='+', )
+    """Driver / Водитель"""
 
-    """Carrier / Перевозчик"""
     carrier = models.ForeignKey(Contractor, on_delete=models.CASCADE, related_name='+', )
+    """Carrier / Перевозчик"""
 
-    """Department / Подразделение"""
     department = models.ForeignKey(Contractor, on_delete=models.CASCADE, related_name='+', )
+    """Department / Подразделение"""
 
-    """Payment type / Вид расчета"""
     payment_type = models.ForeignKey(Contractor, on_delete=models.CASCADE, related_name='+', )
+    """Payment type / Вид расчета"""
 
-    """Cost / Стоимость"""
     cost = models.DecimalField(max_digits=16, decimal_places=9)
+    """Cost / Стоимость"""
 
-    """Invoice number / Номер выставленного счета"""
     invoice_number = models.CharField(max_length=20)
+    """Invoice number / Номер выставленного счета"""
 
-    """Invoice date / Дата выставленного счета"""
     invoice_date = models.DateField()
+    """Invoice date / Дата выставленного счета"""
 
-    """Payment date / Дата оплаты"""
     payment_date = models.DateField()
+    """Payment date / Дата оплаты"""
 
-    """Possibility of postponing / Возможность отсрочки"""
     delay = models.BooleanField()
+    """Possibility of postponing / Возможность отсрочки"""

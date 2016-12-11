@@ -20,11 +20,11 @@ class AdditionalService(models.Model):
     Additional services reference / Справочник дополнительных услуг
     """
 
-    """Additional service name / Название дополнительной услуги"""
     name = models.CharField(max_length=50)
+    """Additional service name / Название дополнительной услуги"""
 
-    """Additional service price / Стоимость дополнительной услуги"""
     price = models.DecimalField(max_digits=16, decimal_places=9)
+    """Additional service price / Стоимость дополнительной услуги"""
 
     def __str__(self):
         return self.name

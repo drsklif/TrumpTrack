@@ -30,61 +30,62 @@ class ForwardVoucher(models.Model):
     Forward voucher / Экспедиторская расписка
     """
 
-    """Forward voucher type / Тип экспедиторской расписки"""
     fv_type = models.ForeignKey(ForwardVoucherType, on_delete=models.CASCADE, related_name='+', default=1)
+    """Forward voucher type / Тип экспедиторской расписки"""
 
-    """Forward voucher status / Статус экспедиторской расписки"""
     status = models.ForeignKey(ForwardVoucherStatus, on_delete=models.CASCADE, related_name='+', )
+    """Forward voucher status / Статус экспедиторской расписки"""
 
-    """Department / Подразделение (своя организация. для выставления счетов)"""
     department = models.ForeignKey(Contractor, on_delete=models.CASCADE, related_name='+',)
+    """Department / Подразделение (своя организация. для выставления счетов)"""
 
-    """Customer / Заказчик"""
     customer = models.ForeignKey(Contractor, on_delete=models.CASCADE, related_name='+', )
+    """Customer / Заказчик"""
 
-    """Sender / Отправитель"""
     sender = models.ForeignKey(Contractor, on_delete=models.CASCADE, related_name='+', )
+    """Sender / Отправитель"""
 
-    """Recipient / Получатель"""
     recipient = models.ForeignKey(Contractor, on_delete=models.CASCADE, related_name='+', )
+    """Recipient / Получатель"""
 
-    """Cargo / Наименование груза"""
     cargo = models.ForeignKey(Cargo, on_delete=models.CASCADE, related_name='+', )
+    """Cargo / Наименование груза"""
 
-    """Cargo packaging type / Тип упаковки груза"""
     packaging_type = models.ForeignKey(PackagingType, on_delete=models.CASCADE, related_name='+', )
+    """Cargo packaging type / Тип упаковки груза"""
 
-    """Cargo state / Состояние груза"""
     cargo_state = models.ForeignKey(CargoState, on_delete=models.CASCADE, related_name='+', )
+    """Cargo state / Состояние груза"""
 
-    """Cargo price / Оценочная стоимость груза"""
     cargo_price = models.DecimalField(max_digits=16, decimal_places=9)
+    """Cargo price / Оценочная стоимость груза"""
 
-    """Places count / Количество мест"""
     places_count = models.IntegerField()
+    """Places count / Количество мест"""
 
-    """Parcel weight / Вес отправления"""
     weight = models.FloatField()
+    """Parcel weight / Вес отправления"""
 
-    """Parcel size / Размер отправления"""
     size = models.ForeignKey(ParcelSize, on_delete=models.CASCADE, related_name='+', )
+    """Parcel size / Размер отправления"""
 
-    """Destination station / Станция назначения"""
     destination_station = models.CharField(max_length=256)
+    """Destination station / Станция назначения"""
 
-    """Documents number / № сопроводительных документов"""
     documents_number = models.CharField(max_length=50)
+    """Documents number / № сопроводительных документов"""
 
-    """Shipment price / Сумма перевозки"""
     shipment_price = models.DecimalField(max_digits=16, decimal_places=9)
+    """Shipment price / Сумма перевозки"""
 
-    """Description / Описание"""
     description = models.CharField(max_length=1024, blank=True)
+    """Description / Описание"""
 
     expenses = models.ManyToManyField(AdditionalService, through='ForwardVoucherExpenses')
+    """Expanses and addtitional services / Затраты и дполонительные услуги"""
 
-    """Shipment / Отправка"""
     shipment = models.ForeignKey(Shipment, on_delete=models.CASCADE, related_name='forward_vouchers', )
+    """Shipment / Отправка"""
 
     def __str__(self):
         return "{}, {}. From {} To {}".format(self.client.name, self.date_departure, self.address_from, self.address_to)

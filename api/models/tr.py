@@ -25,32 +25,32 @@ class TransportationRequest(models.Model):
     Transportation request / Заявка на транспортировку
     """
 
-    """Client / Заказчик"""
     client = models.ForeignKey(Contractor, on_delete=models.CASCADE, related_name='transportation_requests',)
+    """Client / Заказчик"""
 
-    """Loading address / Адрес погрузки"""
     address_from = models.CharField(max_length=250)
+    """Loading address / Адрес погрузки"""
 
-    """Unloading address / Адрес разгрузки"""
     address_to = models.CharField(max_length=250)
+    """Unloading address / Адрес разгрузки"""
 
-    """Departure date / Дата отправки"""
     date_departure = models.DateField()
+    """Departure date / Дата отправки"""
 
-    """Description / Описание"""
     description = models.CharField(max_length=1024, blank=True)
+    """Description / Описание"""
 
-    """Parcel weight / Вес отправления"""
     weight = models.FloatField()
+    """Parcel weight / Вес отправления"""
 
-    """Parcel size / Размер отправления"""
     size = models.ForeignKey(ParcelSize, on_delete=models.CASCADE, related_name='+',)
+    """Parcel size / Размер отправления"""
 
-    """Request type / Тип заявки"""
     type = models.ForeignKey(TransportationRequestType, on_delete=models.CASCADE, related_name='+', )
+    """Request type / Тип заявки"""
 
-    """Request status / Статус заявки"""
     status = models.ForeignKey(TransportationRequestStatus, on_delete=models.CASCADE, related_name='+', )
+    """Request status / Статус заявки"""
 
     def __str__(self):
         return "{}, {}. From {} To {}".format(self.client.name, self.date_departure, self.address_from, self.address_to)

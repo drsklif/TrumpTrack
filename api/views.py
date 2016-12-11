@@ -1,3 +1,13 @@
+# -*- coding: utf-8 -*-
+
+"""
+Created on 11.12.2016
+
+:author: Alexander Ildyakov
+
+Models serializers / Сериализаторы моделей
+"""
+
 from rest_framework import viewsets
 from api.models.property_type import PropertyType
 from api.models.contractor_status import ContractorStatus
@@ -10,6 +20,8 @@ from api.serializers import PropertyTypeSerializer, ContractorStatusSerializer, 
 from api.serializers import ParcelSizeSerializer, TransportationRequestTypeSerializer, \
     TransportationRequestStatusSerializer, TransportationRequestSerializer
 from api import filters
+
+__author__ = 'ildyakov'
 
 
 class PropertyTypeViewSet(viewsets.ModelViewSet):

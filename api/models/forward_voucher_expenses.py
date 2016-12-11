@@ -22,14 +22,14 @@ class ForwardVoucherExpenses(models.Model):
     Forward expenses / Дополнительные затраты
     """
 
-    """Forward voucher / Экспедиторская расписка"""
     forward_voucher = models.ForeignKey(ForwardVoucher, on_delete=models.CASCADE,)
+    """Forward voucher / Экспедиторская расписка"""
 
-    """Additional service / Дополнительная услуга"""
     additional_service = models.ForeignKey(AdditionalService, on_delete=models.CASCADE, )
+    """Additional service / Дополнительная услуга"""
 
-    """Additional service price / Стоимость дополнительной услуги"""
     price = models.DecimalField(max_digits=16, decimal_places=9)
+    """Additional service price / Стоимость дополнительной услуги"""
 
     def __str__(self):
         return self.name

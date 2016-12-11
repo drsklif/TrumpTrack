@@ -20,8 +20,8 @@ class CargoState(models.Model):
     Cargo state reference / Справочник состояний грузов
     """
 
-    """Cargo state name / Наименование состояния груза"""
     name = models.CharField(max_length=50)
+    """Cargo state name / Наименование состояния груза"""
 
     def __str__(self):
         return self.name

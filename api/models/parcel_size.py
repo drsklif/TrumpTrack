@@ -22,6 +22,7 @@ class ParcelSize(models.Model):
     all = (LARGE, MEDIUM, SMALL)
 
     size = models.CharField(max_length=2, choices=all)
+    """Parcel size / Размер отправления"""
 
     def __str__(self):
         return self.size

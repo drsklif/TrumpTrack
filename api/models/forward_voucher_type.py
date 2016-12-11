@@ -20,8 +20,8 @@ class ForwardVoucherType(models.Model):
     Packaging type reference / Справочник видов упаковок
     """
 
-    """Packaging type name / Наименование вида упаковки"""
     name = models.CharField(max_length=50)
+    """Packaging type name / Наименование вида упаковки"""
 
     def __str__(self):
         return self.name

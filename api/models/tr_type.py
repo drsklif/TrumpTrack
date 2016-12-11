@@ -18,8 +18,8 @@ class TransportationRequestType(models.Model):
     Transportation request type reference / Справочник типов заявок на транспортировку
     """
 
-    """Request type name / Название типа заявки"""
     name = models.CharField(max_length=50)
+    """Request type name / Название типа заявки"""
 
     def __str__(self):
         return self.name

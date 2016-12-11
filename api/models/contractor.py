@@ -21,38 +21,38 @@ class Contractor(models.Model):
     Contractor / Контрагент
     """
 
-    """Contractor name / Название организации"""
     name = models.CharField(max_length=256, blank=False)
+    """Contractor name / Название организации"""
 
-    """Contractor full name / Полное название организации"""
     full_name = models.CharField(max_length=1024, blank=False, null=True)
+    """Contractor full name / Полное название организации"""
 
-    """Contractor property type / Тип собственности организации"""
     property_type = models.ForeignKey(PropertyType, on_delete=models.CASCADE, related_name='+',)
+    """Contractor property type / Тип собственности организации"""
 
-    """Contractor status / Статус организации"""
     status = models.ForeignKey(ContractorStatus, on_delete=models.CASCADE, related_name='+',)
+    """Contractor status / Статус организации"""
 
-    """Phone numbers / Номера телефонов"""
     phone = models.CharField(max_length=150, blank=True)
+    """Phone numbers / Номера телефонов"""
 
-    """Fax numbers / Номера факсов"""
     fax = models.CharField(max_length=150, blank=True)
+    """Fax numbers / Номера факсов"""
 
-    """Email"""
     email = models.EmailField(max_length=150, blank=True)
+    """Email"""
 
-    """Legal address / Юридический адрес"""
     address_legal = models.CharField(max_length=250, blank=True)
+    """Legal address / Юридический адрес"""
 
-    """Actual address / Фактический адрес"""
     address_actual = models.CharField(max_length=250, blank=True)
+    """Actual address / Фактический адрес"""
 
-    """Mailing address / Почтовый адрес"""
     address_mailing = models.CharField(max_length=250, blank=True)
+    """Mailing address / Почтовый адрес"""
 
-    """Notes / Заметки"""
     notes = models.CharField(max_length=2048, blank=True)
+    """Notes / Заметки"""
 
     def __str__(self):
         return self.name
